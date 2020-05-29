@@ -3,9 +3,9 @@
 # Sidekiq::Extensions.enable_delay!
 
 defaults = {
-  url: ENV['REDIS_URL'],
-  db: ENV['REDIS_DB'],
-  namespace: ENV['SIDEKIQ_NAMESPACE']
+  url: ENV["REDIS_URL"],
+  db: ENV["REDIS_DB"],
+  namespace: ENV["SIDEKIQ_NAMESPACE"]
 }
 
 Sidekiq.configure_server do |config|

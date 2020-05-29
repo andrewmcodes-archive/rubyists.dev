@@ -4,7 +4,7 @@
 # require 'raven/processor/cookies'
 
 Raven.configure do |config|
-  config.dsn = ENV['SENTRY_DSN']
+  config.dsn = ENV["SENTRY_DSN"]
   config.async = ->(event) { SentryWorker.perform_later(event) }
   # config.encoding = :gzip
   config.environments = %w[production]
