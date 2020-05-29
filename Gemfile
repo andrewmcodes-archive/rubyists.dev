@@ -15,11 +15,11 @@ gem "name_of_person", "~> 1.1"
 gem "omniauth-github", "~> 1.4"
 gem "pg", "~> 1.2"
 gem "puma", "~> 4.3"
-gem "rails-observers", "~> 0.1.5" # removal candidate
 gem "rails", "~> 6.0"
+gem "rails-observers", "~> 0.1.5" # removal candidate
+gem "redis", "~> 4.1"
 gem "redis-namespace", "~> 1.7" # removal candidate
 gem "redis-rails", "~> 5.0" # removal candidate
-gem "redis", "~> 4.1"
 gem "sass-rails", "~> 6.0" # removal candidate
 gem "sentry-raven", "~> 3.0"
 gem "sidekiq", "~> 6.0"
@@ -30,7 +30,7 @@ gem "view_component", "~> 2.7"
 gem "webpacker", "~> 4.0"
 
 group :development, :test do
-  gem 'bullet', '~> 6.1'
+  gem "bullet", "~> 6.1"
   gem "fasterer", "~> 0.8.3"
   gem "ffaker", "~> 2.15" # removal candidate
   gem "lol_dba", "~> 2.2"
@@ -40,17 +40,20 @@ group :development, :test do
 end
 
 group :development do
-  gem 'annotate', '~> 3.1'
+  gem "annotate", "~> 3.1"
   gem "brakeman", "~> 4.8"
-  gem "erb_lint", "~> 0.0.33"
+  gem "database_consistency", "~> 0.8.0", require: false
+  gem "erb_lint", "~> 0.0.33", require: false
+  gem "erd", "~> 0.6.4"
   gem "letter_opener", "~> 1.7"
   gem "listen", "~> 3.1", "< 3.2"
   gem "model_probe", "~> 1.0"
-  gem 'ngrok-tunnel', '~> 2.1'
+  gem "ngrok-tunnel", "~> 2.1"
+  gem "ordinare", "~> 0.4.0"
   gem "standard", "~> 0.4.6"
   gem "strong_versions", "~> 0.4.4"
   gem "tmuxinator", "~> 2.0"
-  gem 'tty-box', '~> 0.5.0'
+  gem "tty-box", "~> 0.5.0"
 end
 
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]

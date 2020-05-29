@@ -37,9 +37,9 @@ ActiveRecord::Schema.define(version: 2020_05_29_031947) do
   end
 
   create_table "announcements", force: :cascade do |t|
-    t.datetime "published_at"
-    t.string "announcement_type"
-    t.string "name"
+    t.datetime "published_at", null: false
+    t.string "announcement_type", default: "update", null: false
+    t.string "name", null: false
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

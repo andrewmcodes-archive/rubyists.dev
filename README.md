@@ -44,12 +44,17 @@ The application provides several code quality analysis tools and linters baked i
 
 - [Brakeman][brakeman]: A static analysis security vulnerability scanner for RoR
 
-### Performance & DB optimizations
+### Performance
 
 - [Fasterer][fasterer]: CLI tool to suggest some speed improvements for Ruby
 - [Bullet][bullet]: Help to kill N+1 queries and unused eager loading**
 - [Webpack Bundle Analyzer][webpack-bundle-analyzer]: Visualize size of webpack output files with an interactive zoomable treemap
+
+### DB
+
+- [DatabaseConsistency]: A tool to find inconsistency between models schema and database constraints.
 - [lol_dba][lol_dba]: Find DB columns that should be indexed
+- [erd][erd]: A Rails engine for drawing your apps ERD. View at `/erd` in development mode.**
 
 ### Formatting & Linters
 
@@ -60,15 +65,33 @@ The application provides several code quality analysis tools and linters baked i
 - [Prettier Standard*][prettier-standard]: Formats JS & CSS with Prettier and lints with ESLint+Standard
 - [StandardRB*][standardrb]: Ruby Style Guide, with linter & automatic code fixer
 - [StrongVersions*][strong_versions]: Enforce a strict versioning policy in your Gemfile
+- [ordinare][ordinate]: Ordinare sorts gems in your Gemfile alphabetically*
 
 >`*` Required to be run for merge. Running `bin/format` should auto-correct everything for you. The exception is Model Probe, which you will need to run yourself if you add a new model.
 
 >`**` Is running in the background or will run automatically after certain actions happen
 
+### Not being used
+
+- [Traceroute][Traceroute]: A Rake task that helps you find dead routes and unused actions in your app
+- [yardstick][yardstick]: A tool for verifying YARD documentation coverage
+- [documentation][documentation]: A Rails engine to provide the ability to add documentation to a Rails application
+- [bootboot][bootboot]: Dualboot your Ruby app made easy
+- [skunk][skunk]: A RubyCritic extension to calculate SkunkScore for a file or project
+- [coverband][coverband]: A gem to measure production code usage
+- [bundle_benchmark][bundle_benchmark]: Time gem loading
+- [derailed_benchmarks][derailed_benchmarks]: Benchmarks for your whole Rails app
+- [htmlbeautifier][htmlbeautifier]: ERB formatter with VSCode extension
+- [full_request_logger][full_request_logger]: Easy access to full request logs via a web UI
+- [sandi_meter][sandi_meter]: Static analysis tool for checking Ruby code for Sandi Metz' rules
+- [strong_migrations][strong_migrations]: Catch unsafe migrations in development
+
+[database_consistency]: https://github.com/djezzzl/database_consistency
 [annotate_models]: https://github.com/ctran/annotate_models
 [brakeman]: https://github.com/presidentbeef/brakeman
 [bullet]: https://github.com/flyerhzm/bullet
 [erb-lint]: https://github.com/Shopify/erb-lint
+[erd]: https://github.com/amatsuda/erd
 [fasterer]: https://github.com/DamirSvrtan/fasterer
 [hixonrails]: https://hixonrails.com
 [lol_dba]: https://github.com/plentz/lol_dba
@@ -78,3 +101,18 @@ The application provides several code quality analysis tools and linters baked i
 [standardrb]: https://github.com/testdouble/standard
 [strong_versions]: https://github.com/bobf/strong_versions
 [webpack-bundle-analyzer]: https://github.com/webpack-contrib/webpack-bundle-analyzer
+[ordinare]: https://github.com/nikolalsvk/ordinare
+
+<!-- Not being used but putting here since this is a nice list of Rails tooling -->
+[Traceroute]: https://github.com/amatsuda/traceroute
+[yardstick]: https://github.com/dkubb/yardstick
+[documentation]: https://github.com/adamcooke/documentation
+[bootboot]: https://github.com/Shopify/bootboot
+[skunk]: https://github.com/fastruby/skunk
+[coverband]: https://github.com/danmayer/coverband
+[bundle_benchmark]: https://github.com/ankane/bundle_benchmark
+[derailed_benchmarks]: https://github.com/schneems/derailed_benchmarks
+[htmlbeautifier]: https://github.com/threedaymonk/htmlbeautifier
+[full_request_logger]: https://github.com/basecamp/full_request_logger
+[sandi_meter]: https://github.com/makaroni4/sandi_meter
+[strong_migrations]:https://github.com/ankane/strong_migrations

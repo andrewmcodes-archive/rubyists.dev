@@ -27,9 +27,9 @@ class User < ApplicationRecord
   has_many :services
 
   # validations ...............................................................
-  # validates :admin, presence: true
-  # validates :email, presence: true
-  # validates :encrypted_password, presence: true
+  validates :admin, presence: true
+  validates :email, presence: true
+  validates :encrypted_password, presence: true
 
   # callbacks .................................................................
   # scopes ....................................................................

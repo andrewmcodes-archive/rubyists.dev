@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo "== Checking lol_dba =="
+bin/lol_dba db:find_indexes
+
+echo "== Checking DatabaseConsistency =="
+bin/database_consistency

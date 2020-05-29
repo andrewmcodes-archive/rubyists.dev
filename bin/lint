@@ -1,5 +1,11 @@
 #!/bin/bash
 
+echo "== Checking StrongVersions =="
+bin/stong_versions
+
+echo "== Checking Ordinare =="
+bin/ordinare --check
+
 echo "== Checking StandardRb =="
 bin/standardrb --format progress
 
@@ -11,6 +17,3 @@ yarn run prettier:check
 
 echo "== Checking Zeitwerk =="
 bin/rails zeitwerk:check
-
-echo "== Checking StrongVersions =="
-bin/stong_versions

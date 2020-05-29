@@ -97,6 +97,8 @@ GEM
     concurrent-ruby (1.1.6)
     connection_pool (2.2.2)
     crass (1.0.6)
+    database_consistency (0.8.0)
+      activerecord (>= 3.2)
     devise (4.7.1)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -116,6 +118,9 @@ GEM
       rainbow
       rubocop (~> 0.79)
       smart_properties
+    erd (0.6.4)
+      nokogiri
+      ruby-graphviz
     erubi (1.9.0)
     erubis (2.7.0)
     faraday (1.0.1)
@@ -189,6 +194,7 @@ GEM
     omniauth-oauth2 (1.6.0)
       oauth2 (~> 1.1)
       omniauth (~> 1.9)
+    ordinare (0.4.0)
     orm_adapter (0.5.0)
     paint (2.2.0)
     parallel (1.19.1)
@@ -289,6 +295,8 @@ GEM
       unicode-display_width (>= 1.4.0, < 2.0)
     rubocop-performance (1.5.2)
       rubocop (>= 0.71.0)
+    ruby-graphviz (1.2.5)
+      rexml
     ruby-progressbar (1.10.1)
     ruby_dep (1.5.0)
     ruby_parser (3.14.2)
@@ -398,9 +406,11 @@ DEPENDENCIES
   bootsnap (~> 1.4)
   brakeman (~> 4.8)
   bullet (~> 6.1)
+  database_consistency (~> 0.8.0)
   devise (~> 4.7)
   dotenv-rails (~> 2.7)
   erb_lint (~> 0.0.33)
+  erd (~> 0.6.4)
   fasterer (~> 0.8.3)
   ffaker (~> 2.15)
   friendly_id (~> 5.3)
@@ -412,6 +422,7 @@ DEPENDENCIES
   name_of_person (~> 1.1)
   ngrok-tunnel (~> 2.1)
   omniauth-github (~> 1.4)
+  ordinare (~> 0.4.0)
   pg (~> 1.2)
   pry-rails (~> 0.3.9)
   puma (~> 4.3)

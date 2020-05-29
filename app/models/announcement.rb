@@ -3,10 +3,10 @@
 # Table name: announcements
 #
 #  id                :bigint           not null, primary key
-#  announcement_type :string
+#  announcement_type :string           default("update"), not null
 #  description       :text
-#  name              :string
-#  published_at      :datetime
+#  name              :string           not null
+#  published_at      :datetime         not null
 #  created_at        :datetime         not null
 #  updated_at        :datetime         not null
 #
@@ -17,7 +17,7 @@ class Announcement < ApplicationRecord
   # includes ..................................................................
   # relationships .............................................................
   # validations ...............................................................
-  validates :announcement_type, :description, :name, :published_at, presence: true
+  validates :announcement_type, :name, :published_at, presence: true
   validates :announcement_type, inclusion: {in: TYPES}
 
   # callbacks .................................................................
