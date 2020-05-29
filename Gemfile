@@ -30,7 +30,7 @@ gem "view_component", "~> 2.7"
 gem "webpacker", "~> 4.0"
 
 group :development, :test do
-  gem "bullet"
+  gem 'bullet', '~> 6.1'
   gem "fasterer", "~> 0.8.3"
   gem "ffaker", "~> 2.15" # removal candidate
   gem "lol_dba", "~> 2.2"
@@ -40,17 +40,17 @@ group :development, :test do
 end
 
 group :development do
-  gem "annotate"
+  gem 'annotate', '~> 3.1'
   gem "brakeman", "~> 4.8"
   gem "erb_lint", "~> 0.0.33"
   gem "letter_opener", "~> 1.7"
   gem "listen", "~> 3.1", "< 3.2"
   gem "model_probe", "~> 1.0"
-  gem "ngrok-tunnel"
+  gem 'ngrok-tunnel', '~> 2.1'
   gem "standard", "~> 0.4.6"
   gem "strong_versions", "~> 0.4.4"
   gem "tmuxinator", "~> 2.0"
-  gem "tty-box"
+  gem 'tty-box', '~> 0.5.0'
 end
 
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
