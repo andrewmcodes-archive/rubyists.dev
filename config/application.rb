@@ -24,7 +24,7 @@ require "view_component/engine"
 Bundler.require(*Rails.groups)
 Dotenv::Railtie.load
 
-module Medals
+module Rubyists
   class Application < Rails::Application
     config.active_record.observers = %i[]
     config.load_defaults(6.0)

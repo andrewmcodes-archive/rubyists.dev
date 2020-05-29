@@ -9,12 +9,12 @@ default: &default
 
 development:
   <<: *default
-  database: medals_development
+  database: rubyists_development
 
 test:
   <<: *default
-  database: medals_test
+  database: rubyists_test
 
 production:
   <<: *default
-  database: medals_production
+  database: rubyists_production
