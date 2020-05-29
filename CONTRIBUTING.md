@@ -22,10 +22,12 @@ Everyone interacting with the Medals project's codebase, issue trackers, etc. is
 
 This project is configured with automated formatters to minimize bike shedding related to source formatting.
 
-- Ruby: [Standard](https://github.com/testdouble/standard)
-- JavaScript & SCSS/CSS: [Prettier-Standard](https://github.com/sheerun/prettier-standard)
-- ERB: [erb-lint](https://github.com/Shopify/erb-lint)
+**Please run `./bin/format` prior to submitting pull requests.**
 
-Please run `./bin/format` prior to submitting pull requests.
+View more info about tooling on the [README](README.md)
+
+## Committing
+
+When committing changes please follow the [Conventional Commits](https://conventionalcommits.org/) format.
 
 Thanks! :heart: :heart: :heart:

@@ -1,11 +1,15 @@
 {
   "name": "medals",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "prettier:check": "prettier-standard -- --check \"**/*.js\" \"app/**/*.css\"",
     "prettier:format": "prettier-standard -- \"**/*.js\" \"app/**/*.css\"",
-    "prettier:lint": "prettier-standard -- --lint \"**/*.js\" \"app/**/*.css\""
+    "prettier:lint": "prettier-standard -- --lint \"**/*.js\" \"app/**/*.css\"",
+    "webpack:analyze": "yarn webpack:build_json && yarn webpack:analyze_json",
+    "webpack:build_json": "RAILS_ENV=${RAILS_ENV:-production} NODE_ENV=${NODE_ENV:-production} bin/webpack --profile --json > tmp/webpack-stats.json",
+    "webpack:analyze_json": "webpack-bundle-analyzer tmp/webpack-stats.json public/packs",
+    "release": "standard-version"
   },
   "dependencies": {
     "@rails/actioncable": "^6.0.0",
@@ -20,6 +24,7 @@
   },
   "devDependencies": {
     "prettier-standard": "^16.3.0",
+    "standard-version": "^8.0.0",
     "webpack-bundle-analyzer": "^3.8.0",
     "webpack-dev-server": "^3.11.0"
   }
