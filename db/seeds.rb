@@ -1,7 +1,18 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+code_climate = Organization.create!(name: "Code Climate", url: "https://codeclimate.com", company: true, pricing_strategy: :hybrid)
+
+Badge.create!(
+  [
+    {
+      title: "Maintainability",
+      asset_url: "https://api.codeclimate.com/v1/badges/015a1b40a1400b2f6658/maintainability",
+      source_url: "https://codeclimate.com/github/andrewmcodes/rubyists.dev/maintainability",
+      organization: code_climate
+    },
+    {
+      title: "Test Coverage",
+      asset_url: "https://api.codeclimate.com/v1/badges/015a1b40a1400b2f6658/test_coverage",
+      source_url: "https://codeclimate.com/github/andrewmcodes/rubyists.dev/test_coverage",
+      organization: code_climate
+    }
+  ]
+)
