@@ -15,11 +15,12 @@
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
-    "@rails/webpacker": "4.2.2",
+    "@rails/webpacker": "^5.1.1",
     "stimulus": "^1.1.1",
     "stimulus_reflex": "^3.2.2-pre0",
     "tailwindcss": "^1.4.6",
-    "turbolinks": "^5.2.0"
+    "turbolinks": "^5.2.0",
+    "typeface-raleway": "^0.0.75"
   },
   "devDependencies": {
     "prettier-standard": "^16.3.0",

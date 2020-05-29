@@ -1,5 +1,4 @@
 class ApplicationComponent < ViewComponent::Base
-
   private
 
   def find_or_fallback(supplied, valid, fallback)

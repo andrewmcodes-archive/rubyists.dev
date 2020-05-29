@@ -17,6 +17,6 @@ class FlashComponent < ApplicationComponent
   end
 
   def render?
-    flash.exists?
+    flash
   end
 end
