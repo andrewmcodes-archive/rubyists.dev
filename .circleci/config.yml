@@ -19,10 +19,11 @@ jobs:
     environment:
       BUNDLE_JOBS: '3'
       BUNDLE_RETRY: '3'
-      PGHOST: 127.0.0.1
-      PGPASSWORD: ''
-      PGUSER: circleci-demo-ruby
+      DB_HOST: 127.0.0.1
+      DB_PASSWORD: ''
+      DB_USERNAME: circleci-demo-ruby
       RAILS_ENV: test
+      REDIS_URL: redis://127.0.0.1
     parallelism: 3
     steps:
       - checkout
