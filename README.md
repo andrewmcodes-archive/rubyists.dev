@@ -1,5 +1,6 @@
 # Rubyists.dev
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/378144eed8404b63bee90f0730720f73)](https://app.codacy.com/manual/andrewmcodes/rubyists.dev?utm_source=github.com&utm_medium=referral&utm_content=andrewmcodes/rubyists.dev&utm_campaign=Badge_Grade_Dashboard)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 
 Ruby on Rails application initialized with [Hix on Rails][hixonrails].
