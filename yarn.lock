@@ -8921,7 +8921,7 @@ stdout-stream@^1.4.0:
   dependencies:
     readable-stream "^2.0.1"
 
-"stimulus@>= 1.1", stimulus@^1.1.1:
+"stimulus@>= 1.1", stimulus@^1.1.0, stimulus@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/stimulus/-/stimulus-1.1.1.tgz#53c2fded6849e7b85eed3ed8dd76e33abd74bec5"
   integrity sha512-R0mBqKp48YnRDZOxZ8hiOH4Ilph3Yj78CIFTBkCwyHs4iGCpe7xlEdQ7cjIxb+7qVCSxFKgxO+mAQbsNgt/5XQ==
@@ -9235,6 +9235,13 @@ table@^5.2.3:
     lodash "^4.17.14"
     slice-ansi "^2.1.0"
     string-width "^3.0.0"
+
+tailwindcss-stimulus-components@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/tailwindcss-stimulus-components/-/tailwindcss-stimulus-components-1.1.0.tgz#75bc472352bd3073d0990903734f23beac19b5e5"
+  integrity sha512-T6VY+ZNrtJtKO4qW/IQEoF7hmLGRlxOPfykWqoF9b/zbcdT50hAwo7o61R82Pa6IsnPbT35FWp83FqmRTwbYFQ==
+  dependencies:
+    stimulus "^1.1.0"
 
 tailwindcss@^1.4.6:
   version "1.4.6"

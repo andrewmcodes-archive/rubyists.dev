@@ -20,3 +20,16 @@ application.load(
   )
 )
 StimulusReflex.initialize(application, { consumer, controller, debug: false })
+
+import {
+  Dropdown,
+  Modal,
+  Tabs,
+  Popover,
+  Toggle
+} from 'tailwindcss-stimulus-components'
+application.register('dropdown', Dropdown)
+application.register('modal', Modal)
+application.register('tabs', Tabs)
+application.register('popover', Popover)
+application.register('toggle', Toggle)
