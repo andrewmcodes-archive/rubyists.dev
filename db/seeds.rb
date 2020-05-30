@@ -4,6 +4,8 @@ depfu = Organization.create!(name: "Depfu", url: "https://depfu.com", company: t
 snyk = Organization.create!(name: "Snyk", url: "https://snyk.io", company: true, pricing_strategy: :hybrid)
 circleci = Organization.create!(name: "CircleCI", url: "https://circleci.com", company: true, pricing_strategy: :hybrid)
 travis = Organization.create!(name: "Travis CI", url: "https://travis-ci.org", company: true, pricing_strategy: :hybrid)
+codacy = Organization.create!(name: "Codacy", url: "https://codacy.com", company: true, pricing_strategy: :hybrid)
+codebeat = Organization.create!(name: "Codebeat", url: "https://codebeat.co", company: true, pricing_strategy: :hybrid)
 
 Badge.create!(
   [
@@ -60,6 +62,18 @@ Badge.create!(
       asset_url: "https://travis-ci.org/andrewmcodes/rubyists.dev.svg?branch=master",
       source_url: "https://travis-ci.org/andrewmcodes/rubyists.dev",
       organization: travis
+    },
+    {
+      title: "Codebeat Badge",
+      asset_url: "https://codebeat.co/badges/d01df093-17b0-4043-86f0-87a6c0fb0d02",
+      source_url: "https://codebeat.co/projects/github-com-andrewmcodes-rubyists-dev-master",
+      organization: codebeat
+    },
+    {
+      title: "Codacy Badge",
+      asset_url: "https://app.codacy.com/project/badge/Grade/6b88d9ceaba9469aa8f622e499e84f35",
+      source_url: "https://www.codacy.com/manual/andrewmcodes/rubyists.dev?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=andrewmcodes/rubyists.dev&amp;utm_campaign=Badge_Grade",
+      organization: codacy
     }
   ]
 )

@@ -2,7 +2,6 @@
 
 <%= render(PageComponent.new) do |component| %>
   <%= component.with(:title) {"Badges"} %>
-  <%= component.with(:subtitle) {"Subtitle"} %>
   <% component.with(:body) do %>
       <%= render(BadgeComponent.with_collection(@badges)) %>
   <% end %>
