@@ -15,7 +15,7 @@
 #
 #  index_badges_on_organization_id  (organization_id)
 #
-require 'test_helper'
+require "test_helper"
 
 class BadgeTest < ActiveSupport::TestCase
   # test "the truth" do

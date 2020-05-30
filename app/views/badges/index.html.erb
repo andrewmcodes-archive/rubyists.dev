@@ -1,12 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<%= render(PageComponent.new(body_width: "md:w-2/3")) do |component| %>
+<%= render(PageComponent.new) do |component| %>
   <%= component.with(:title) {"Badges"} %>
   <%= component.with(:subtitle) {"Subtitle"} %>
   <% component.with(:body) do %>
-    <div class="flex flex-row">
       <%= render(BadgeComponent.with_collection(@badges)) %>
+  <% end %>
+  <% component.with(:actions) do %>
+    <div class="flex">
+      <%= link_to 'New Badge', new_badge_path, class: "mx-auto mt-16 text-white bg-red-500 border-0 py-2 px-8 focus:outline-none hover:bg-red-600 rounded text-lg" %>
     </div>
-    <%= link_to 'New Badge', new_badge_path %>
   <% end %>
 <% end %>

@@ -1,11 +1,10 @@
 <div class="container px-5 py-24 mx-auto">
-  <div class="flex flex-col w-full mb-12 text-center">
-    <%= tag.h1(class: "mb-4 text-2xl font-medium text-white sm:text-3xl") { title } if title %>
-    <%= tag.p(class: "lg:w-2/3 mx-auto leading-relaxed text-base") { subtitle } if subtitle %>
+  <div class="mb-20 text-center">
+    <%= tag.h1(class: "sm:text-3xl text-2xl font-medium text-center title-font text-white mb-4") { title } if title %>
+    <%= tag.p(class: "text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto") { subtitle } if subtitle %>
   </div>
-  <div class="mx-auto <%= body_width %>">
-    <div class="flex flex-col -m-2">
-      <%= body %>
-    </div>
+  <div class="flex flex-wrap -mx-2 lg:w-4/5 sm:mx-auto sm:mb-2">
+    <%= body %>
   </div>
+  <%= actions %>
 </div>

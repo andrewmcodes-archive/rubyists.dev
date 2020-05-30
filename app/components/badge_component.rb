@@ -7,7 +7,7 @@ class BadgeComponent < ApplicationComponent
 
   attr_reader :badge
 
-  def title
-    badge.organization ? "#{badge.organization.name} - #{badge.title}" : badge.title
+  def org_name
+    badge.organization ? badge.organization.name : false
   end
 end

@@ -28,7 +28,7 @@ class BadgesController < ApplicationController
 
     respond_to do |format|
       if @badge.save
-        format.html { redirect_to @badge, notice: 'Badge was successfully created.' }
+        format.html { redirect_to @badge, notice: "Badge was successfully created." }
         format.json { render :show, status: :created, location: @badge }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class BadgesController < ApplicationController
   def update
     respond_to do |format|
       if @badge.update(badge_params)
-        format.html { redirect_to @badge, notice: 'Badge was successfully updated.' }
+        format.html { redirect_to @badge, notice: "Badge was successfully updated." }
         format.json { render :show, status: :ok, location: @badge }
       else
         format.html { render :edit }
@@ -56,19 +56,20 @@ class BadgesController < ApplicationController
   def destroy
     @badge.destroy
     respond_to do |format|
-      format.html { redirect_to badges_url, notice: 'Badge was successfully destroyed.' }
+      format.html { redirect_to badges_url, notice: "Badge was successfully destroyed." }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_badge
-      @badge = Badge.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def badge_params
-      params.require(:badge).permit(:title, :asset_url, :source_url, :belongs_to)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_badge
+    @badge = Badge.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def badge_params
+    params.require(:badge).permit(:title, :asset_url, :source_url, :belongs_to)
+  end
 end

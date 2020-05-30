@@ -16,7 +16,7 @@
 #  index_categorizations_on_categorizable_type  (categorizable_type)
 #  index_categorizations_on_category_id         (category_id)
 #
-require 'test_helper'
+require "test_helper"
 
 class CategorizationTest < ActiveSupport::TestCase
   # test "the truth" do

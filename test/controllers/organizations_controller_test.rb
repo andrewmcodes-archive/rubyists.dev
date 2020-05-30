@@ -1,4 +1,4 @@
-require 'test_helper'
+require "test_helper"
 
 class OrganizationsControllerTest < ActionDispatch::IntegrationTest
   setup do
@@ -16,8 +16,8 @@ class OrganizationsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should create organization" do
-    assert_difference('Organization.count') do
-      post organizations_url, params: { organization: { name: @organization.name, type: @organization.type, url: @organization.url } }
+    assert_difference("Organization.count") do
+      post organizations_url, params: {organization: {name: @organization.name, type: @organization.type, url: @organization.url}}
     end
 
     assert_redirected_to organization_url(Organization.last)
@@ -34,12 +34,12 @@ class OrganizationsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update organization" do
-    patch organization_url(@organization), params: { organization: { name: @organization.name, type: @organization.type, url: @organization.url } }
+    patch organization_url(@organization), params: {organization: {name: @organization.name, type: @organization.type, url: @organization.url}}
     assert_redirected_to organization_url(@organization)
   end
 
   test "should destroy organization" do
-    assert_difference('Organization.count', -1) do
+    assert_difference("Organization.count", -1) do
       delete organization_url(@organization)
     end
 

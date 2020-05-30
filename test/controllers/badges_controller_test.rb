@@ -1,4 +1,4 @@
-require 'test_helper'
+require "test_helper"
 
 class BadgesControllerTest < ActionDispatch::IntegrationTest
   setup do
@@ -16,8 +16,8 @@ class BadgesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should create badge" do
-    assert_difference('Badge.count') do
-      post badges_url, params: { badge: { asset_url: @badge.asset_url, belongs_to: @badge.belongs_to, source_url: @badge.source_url, title: @badge.title } }
+    assert_difference("Badge.count") do
+      post badges_url, params: {badge: {asset_url: @badge.asset_url, belongs_to: @badge.belongs_to, source_url: @badge.source_url, title: @badge.title}}
     end
 
     assert_redirected_to badge_url(Badge.last)
@@ -34,12 +34,12 @@ class BadgesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update badge" do
-    patch badge_url(@badge), params: { badge: { asset_url: @badge.asset_url, belongs_to: @badge.belongs_to, source_url: @badge.source_url, title: @badge.title } }
+    patch badge_url(@badge), params: {badge: {asset_url: @badge.asset_url, belongs_to: @badge.belongs_to, source_url: @badge.source_url, title: @badge.title}}
     assert_redirected_to badge_url(@badge)
   end
 
   test "should destroy badge" do
-    assert_difference('Badge.count', -1) do
+    assert_difference("Badge.count", -1) do
       delete badge_url(@badge)
     end
 
