@@ -1,0 +1,7 @@
+<%= render(PageComponent.new) do |component| %>
+  <%= component.with(:title) {"New Badge"} %>
+  <% component.with(:body) do %>
+    <%= render 'form', badge: @badge %>
+    <%= link_to 'Back', badges_path %>
+  <% end %>
+<% end %>

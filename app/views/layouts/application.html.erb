@@ -5,18 +5,19 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= action_cable_meta_tag %>
-    <%= stylesheet_pack_tag "application", media: "all", "data-turbolinks-track": "reload" %>
     <%= javascript_pack_tag "application", "data-turbolinks-track": "reload", defer: true %>
+    <%= stylesheet_pack_tag "application", media: "all", "data-turbolinks-track": "reload" %>
   </head>
   <body>
-    <% flash.each do |msg_type, message| %>
-      <div class="alert <%= bootstrap_class_for(msg_type) %>">
-        <div class="container">
-          <button class="close" data-dismiss="alert"><span>×</span></button>
-          <%= message %>
-        </div>
-      </div>
-    <% end %>
-    <%= yield %>
+    <div class="app dark-mode red desktop">
+      <%= render(HeaderComponent.new) %>
+      <%= render(FlashComponent.new(flash: flash)) %>
+      <main class="main">
+        <section class="text-gray-500 bg-gray-900 body-font">
+          <%= yield %>
+        </section>
+      </main>
+      <%= render(FooterComponent.new) %>
+    </div>
   </body>
 </html>

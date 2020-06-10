@@ -1,0 +1,10 @@
+<div id="error_explanation" class="p-2 bg-gray-800 rounded-md border-red-50">
+  <h2 class="mb-1 text-xs font-medium tracking-widest text-red-500 title-font">
+    <%= pluralize(object.errors.count, "error") %> prohibited saving:
+  </h2>
+  <ul>
+    <% object.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>

@@ -1,0 +1,29 @@
+# == Schema Information
+#
+# Table name: badges
+#
+#  id              :bigint           not null, primary key
+#  asset_url       :string
+#  description     :string
+#  source_url      :string
+#  title           :string           not null
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#  organization_id :bigint
+#
+# Indexes
+#
+#  index_badges_on_organization_id  (organization_id)
+#
+
+one:
+  title: MyString
+  asset_url: MyString
+  source_url: MyString
+  belongs_to: 
+
+two:
+  title: MyString
+  asset_url: MyString
+  source_url: MyString
+  belongs_to: 

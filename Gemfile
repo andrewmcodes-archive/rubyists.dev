@@ -20,6 +20,8 @@ gem "rails-observers", "~> 0.1.5" # removal candidate
 gem "redis", "~> 4.1"
 gem "redis-namespace", "~> 1.7" # removal candidate
 gem "redis-rails", "~> 5.0" # removal candidate
+gem "rubycritic", "~> 4.5", require: false
+gem "rubycritic-small-badge", "~> 0.2.1", require: false
 gem "sass-rails", "~> 6.0" # removal candidate
 gem "sentry-raven", "~> 3.0"
 gem "sidekiq", "~> 6.0"
@@ -27,7 +29,7 @@ gem "skylight", "~> 4.3"
 gem "stimulus_reflex", "~> 3.2"
 gem "turbolinks", "~> 5.2"
 gem "view_component", "~> 2.7"
-gem "webpacker", "~> 4.0"
+gem "webpacker", "~> 5.1"
 
 group :development, :test do
   gem "bullet", "~> 6.1"

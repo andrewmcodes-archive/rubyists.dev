@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  resources :categories
+  resources :badges
+  resources :organizations
   # authenticate :user, lambda { |u| u.admin? } do
   #   mount Sidekiq::Web => "/sidekiq"
   # end

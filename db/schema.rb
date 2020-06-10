@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_29_065227) do
+ActiveRecord::Schema.define(version: 2020_05_29_111720) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,6 +46,37 @@ ActiveRecord::Schema.define(version: 2020_05_29_065227) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "badges", force: :cascade do |t|
+    t.string "title", null: false
+    t.string "asset_url"
+    t.string "source_url"
+    t.string "description"
+    t.bigint "organization_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["organization_id"], name: "index_badges_on_organization_id"
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "categorizations_count", default: 0, null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["name"], name: "index_categories_on_name"
+  end
+
+  create_table "categorizations", force: :cascade do |t|
+    t.string "categorizable_type", null: false
+    t.bigint "categorizable_id", null: false
+    t.bigint "category_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["categorizable_id", "categorizable_type"], name: "categorizationable_id_type_idx"
+    t.index ["categorizable_id"], name: "index_categorizations_on_categorizable_id"
+    t.index ["categorizable_type"], name: "index_categorizations_on_categorizable_type"
+    t.index ["category_id"], name: "index_categorizations_on_category_id"
+  end
+
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string "slug", null: false
     t.integer "sluggable_id", null: false
@@ -55,6 +86,15 @@ ActiveRecord::Schema.define(version: 2020_05_29_065227) do
     t.index ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true
     t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
     t.index ["sluggable_type", "sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id"
+  end
+
+  create_table "organizations", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "url"
+    t.boolean "company", default: false, null: false
+    t.integer "pricing_strategy", default: 0, null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "services", force: :cascade do |t|

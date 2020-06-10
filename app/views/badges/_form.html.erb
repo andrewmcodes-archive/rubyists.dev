@@ -1,0 +1,18 @@
+<%= form_with(model: badge, local: true) do |form| %>
+  <%= render(Form::ErrorsComponent.new(object: badge)) %>
+  <div class="w-full py-2">
+    <%= form.text_field :title, class: "w-full bg-gray-800 rounded border border-gray-700 text-white focus:outline-none focus:border-red-500 text-base px-4 py-2", placeholder: "Title" %>
+  </div>
+  <div class="w-full py-2">
+    <%= form.text_area :description, class: "block w-full h-48 px-4 py-2 text-base text-white bg-gray-800 border border-gray-700 rounded resize-none focus:outline-none focus:border-red-500", placeholder: "Description" %>
+  </div>
+  <div class="w-full py-2">
+  <%= form.text_field :source_url, class: "w-full bg-gray-800 rounded border border-gray-700 text-white focus:outline-none focus:border-red-500 text-base px-4 py-2", placeholder: "Source URL" %>
+  </div>
+  <div class="w-full py-2">
+    <%= form.text_field :asset_url, class: "w-full bg-gray-800 rounded border border-gray-700 text-white focus:outline-none focus:border-red-500 text-base px-4 py-2", placeholder: "Asset URL" %>
+  </div>
+  <div class="flex flex-row-reverse w-full py-2">
+    <%= form.submit "Create Badge", class: "flex text-white bg-red-500 border-0 py-2 px-8 focus:outline-none hover:bg-red-600 rounded text-lg" %>
+  </div>
+<% end %>
